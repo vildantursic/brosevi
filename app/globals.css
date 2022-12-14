@@ -1,9 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Glamore;
+  src: url(/fonts/Glamore.ttf);
+  font-weight: bold;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url(/bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -15,12 +28,18 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.navigation {
+  font-family: Glamore;
+  background-image: url(/bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.logo {
+  background-image: url(/logo-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: #ffffff;
 }

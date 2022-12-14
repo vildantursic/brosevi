@@ -1,57 +1,44 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+
+const images = [
+  "6641",
+  "6646",
+  "6650",
+  "6652",
+  "6656",
+  "6658",
+  "6662",
+  "6666",
+  "6669",
+  "6672",
+  "6677",
+  "6680",
+  "6685",
+  "6690",
+  "6696",
+];
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
+    <div className="px-5 xl:px-10 pb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-flow-row gap-10">
+        {images.map((image, index) => (
+          <div
+            key={`image-${image}`}
+            className="flex items-center justify-center relative overflow-hidden border-2 border-solid border-black rounded-lg"
           >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+            <Image
+              alt="brosevi"
+              src={`/images/IMG_${image}.jpg`}
+              width={700}
+              height={700}
+            ></Image>
+            <div className="absolute bottom-0 w-full h-[60px] bg-white/70 text-black flex items-center justify-center">
+              Broš {index + 1}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
