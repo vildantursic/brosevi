@@ -35,6 +35,22 @@ a {
   background-attachment: fixed;
 }
 
+.separator {
+  background-image: url(/logo-bg.jpg);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.headings {
+  font-family: Glamore;
+}
+
 .logo {
   background-image: url(/logo-bg.jpg);
   background-repeat: no-repeat;

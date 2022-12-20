@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Gallery from "../components/gallery";
 
-const images = [
+const collection2 = [
   {
     id: 6641,
     sold: false,
@@ -63,31 +64,67 @@ const images = [
   },
 ];
 
+const collection1 = [
+  {
+    id: 5114,
+    sold: false,
+  },
+  {
+    id: 5143,
+    sold: false,
+  },
+  {
+    id: 5162,
+    sold: false,
+  },
+  {
+    id: 5166,
+    sold: false,
+  },
+  {
+    id: 5179,
+    sold: false,
+  },
+  {
+    id: 5189,
+    sold: false,
+  },
+  {
+    id: 5195,
+    sold: false,
+  },
+  {
+    id: 5206,
+    sold: false,
+  },
+  {
+    id: 5229,
+    sold: false,
+  },
+  {
+    id: 5241,
+    sold: false,
+  },
+  {
+    id: 5455,
+    sold: false,
+  },
+];
+
 export default function Home() {
   return (
-    <div className="px-5 xl:px-10 pb-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-flow-row gap-10">
-        {images.map((image, index) => (
-          <div
-            key={`image-${image.id}`}
-            className="flex items-center justify-center relative overflow-hidden border-2 border-solid border-black rounded-lg"
-          >
-            {image.sold && (
-              <div className="absolute top-0 w-full h-[60px] bg-red-600/70 text-white flex items-center justify-center font-extrabold">
-                SOLD OUT
-              </div>
-            )}
-            <Image
-              alt="brosevi"
-              src={`/images/IMG_${image.id}.jpg`}
-              width={700}
-              height={700}
-            ></Image>
-            <div className="absolute bottom-0 w-full h-[60px] bg-white/70 text-black flex items-center justify-center">
-              Broš {index + 1}
-            </div>
-          </div>
-        ))}
+    <div className="pb-10">
+      <div className="px-5 xl:px-10">
+        <Gallery images={collection2} folder="collection2" newCollection />
+      </div>
+      <div className="w-full h-52 flex items-center justify-center my-10 overflow-hidden">
+        <div className="separator"></div>
+        <h3 className="px-5 md:px-0 headings font-extrabold text-[60px] text-white absolute">
+          Stara kolekcija
+        </h3>
+      </div>
+      <div className="px-5 xl:px-10">
+        <Gallery images={collection1} folder="collection1" />
       </div>
     </div>
   );
