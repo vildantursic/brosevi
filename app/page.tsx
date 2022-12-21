@@ -20,7 +20,7 @@ const collection2 = [
   },
   {
     id: 6656,
-    sold: false,
+    sold: true,
   },
   {
     id: 6658,
@@ -28,7 +28,7 @@ const collection2 = [
   },
   {
     id: 6662,
-    sold: false,
+    sold: true,
   },
   {
     id: 6666,
