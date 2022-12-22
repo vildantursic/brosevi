@@ -44,7 +44,7 @@ const collection2 = [
   },
   {
     id: 6677,
-    sold: false,
+    sold: true,
   },
   {
     id: 6680,
